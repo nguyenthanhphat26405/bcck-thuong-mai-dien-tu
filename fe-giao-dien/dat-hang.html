@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavish Heritage - Đặt Hàng</title>
+    <link rel="stylesheet" href="style-dat-hang.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h2>LAVISH HERITAGE</h2>
+            <span>Timeless Elegance</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="trang-chu.html">TRANG CHỦ</a></li>
+                <li><a href="bo-suu-tap.html">BỘ SƯU TẬP</a></li>
+                <li><a href="danh-sach-san-pham.html">SẢN PHẨM</a></li>
+                <li><a href="so-sanh-san-pham.html">SO SÁNH SẢN PHẨM</a></li>
+                <li><a href="ket-hop-san-pham.html">KẾT HỢP SẢN PHẨM</a></li>
+                <li><a href="phoi-noi-that.html">CÁ NHÂN HÓA KHÔNG GIAN</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <i class="fas fa-search"></i>
+            <a href="#"><i class="far fa-user"></i></a>
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="banner-content">
+            <h1>ĐẶT HÀNG</h1>
+            <p class="breadcrumb">Trang chủ / Giỏ hàng / <span>Đặt hàng</span></p>
+            <p style="margin-top: 15px; font-size: 13px; font-family: var(--font-body); max-width: 400px;">Hoàn tất thông tin để hoàn thành đơn hàng của bạn.</p>
+        </div>
+    </section>
+
+    <div class="checkout-progress">
+        <div class="progress-step done">
+            <div class="step-circle">1</div>
+            <p>Giỏ hàng</p>
+        </div>
+        <div class="progress-line done-line"></div>
+        <div class="progress-step active">
+            <div class="step-circle">2</div>
+            <p>Thông tin giao hàng</p>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step">
+            <div class="step-circle">3</div>
+            <p>Thanh toán</p>
+        </div>
+    </div>
+
+    <section class="checkout-container">
+        <div class="checkout-form">
+            
+            <div class="form-block">
+                <div class="block-header">
+                    <i class="far fa-user"></i> THÔNG TIN KHÁCH HÀNG
+                </div>
+                <div class="form-grid-2">
+                    <div class="input-group">
+                        <label>Họ và tên *</label>
+                        <input type="text" placeholder="Nhập họ và tên">
+                    </div>
+                    <div class="input-group">
+                        <label>Số điện thoại *</label>
+                        <input type="text" placeholder="Nhập số điện thoại">
+                    </div>
+                </div>
+                <div class="input-group" style="margin-top: 15px;">
+                    <label>Email *</label>
+                    <input type="email" placeholder="Nhập email">
+                </div>
+            </div>
+
+            <div class="form-block">
+                <div class="block-header">
+                    <i class="fas fa-map-marker-alt"></i> ĐỊA CHỈ GIAO HÀNG
+                </div>
+                <div class="form-grid-3">
+                    <div class="input-group">
+                        <label>Tỉnh / Thành phố *</label>
+                        <select><option>Chọn tỉnh / thành phố</option></select>
+                    </div>
+                    <div class="input-group">
+                        <label>Quận / Huyện *</label>
+                        <select><option>Chọn quận / huyện</option></select>
+                    </div>
+                    <div class="input-group">
+                        <label>Phường / Xã *</label>
+                        <select><option>Chọn phường / xã</option></select>
+                    </div>
+                </div>
+                <div class="input-group" style="margin-top: 15px;">
+                    <label>Địa chỉ cụ thể *</label>
+                    <input type="text" placeholder="Số nhà, tên đường, tòa nhà, căn hộ...">
+                </div>
+                <div class="input-group" style="margin-top: 15px;">
+                    <label>Ghi chú (nếu có)</label>
+                    <textarea placeholder="Ghi chú thêm cho đơn hàng..." rows="3"></textarea>
+                </div>
+            </div>
+
+            <div class="form-block">
+                <div class="block-header">
+                    <i class="fas fa-truck"></i> PHƯƠNG THỨC GIAO HÀNG
+                </div>
+                <div class="shipping-methods">
+                    <label class="shipping-card active">
+                        <input type="radio" name="shipping" checked>
+                        <span class="custom-radio"></span>
+                        <i class="fas fa-truck"></i>
+                        <h4>GIAO HÀNG TIÊU CHUẨN</h4>
+                        <p>3 - 5 ngày làm việc</p>
+                        <span class="price">Miễn phí</span>
+                    </label>
+                    <label class="shipping-card">
+                        <input type="radio" name="shipping">
+                        <span class="custom-radio"></span>
+                        <i class="fas fa-bolt"></i>
+                        <h4>GIAO HÀNG NHANH</h4>
+                        <p>1 - 2 ngày làm việc</p>
+                        <span class="price">150.000 đ</span>
+                    </label>
+                    <label class="shipping-card">
+                        <input type="radio" name="shipping">
+                        <span class="custom-radio"></span>
+                        <i class="fas fa-store"></i>
+                        <h4>NHẬN TẠI SHOWROOM</h4>
+                        <p>Có thể nhận trong ngày</p>
+                        <span class="price">Miễn phí</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-block">
+                <div class="block-header">
+                    <i class="far fa-credit-card"></i> PHƯƠNG THỨC THANH TOÁN
+                </div>
+                <div class="payment-methods">
+                    <label class="payment-option">
+                        <div class="pay-info">
+                            <input type="radio" name="payment" checked>
+                            <span class="custom-radio"></span>
+                            <div>
+                                <strong>Thanh toán khi nhận hàng (COD)</strong>
+                                <p>Thanh toán bằng tiền mặt khi nhận hàng</p>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="payment-option">
+                        <div class="pay-info">
+                            <input type="radio" name="payment">
+                            <span class="custom-radio"></span>
+                            <div>
+                                <strong>Chuyển khoản ngân hàng</strong>
+                                <p>Chuyển khoản trực tiếp qua tài khoản ngân hàng</p>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="payment-option">
+                        <div class="pay-info">
+                            <input type="radio" name="payment">
+                            <span class="custom-radio"></span>
+                            <div>
+                                <strong>Thẻ tín dụng / Ghi nợ</strong>
+                                <p>Thanh toán an toàn qua Visa, MasterCard, JCB...</p>
+                            </div>
+                        </div>
+                        <div class="pay-icons">
+                            <i class="fab fa-cc-visa" style="color: #1a1f71;"></i>
+                            <i class="fab fa-cc-mastercard" style="color: #eb001b;"></i>
+                        </div>
+                    </label>
+                    <label class="payment-option">
+                        <div class="pay-info">
+                            <input type="radio" name="payment">
+                            <span class="custom-radio"></span>
+                            <div>
+                                <strong>Ví điện tử</strong>
+                                <p>Thanh toán qua MoMo, ZaloPay, VNPay...</p>
+                            </div>
+                        </div>
+                        <div class="pay-icons text-icons">
+                            <span style="color:#a50064; font-weight:bold;">momo</span>
+                            <span style="color:#0068ff; font-weight:bold;">ZaloPay</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="terms-check">
+                <label>
+                    <input type="checkbox">
+                    Tôi đồng ý với <a href="#">điều khoản</a> và <a href="#">chính sách mua hàng</a> của Lavish Heritage.
+                </label>
+            </div>
+        </div>
+
+        <aside class="order-summary">
+            <div class="summary-box">
+                <div class="block-header justify-center">
+                    <i class="fas fa-shopping-bag"></i> ĐƠN HÀNG CỦA BẠN
+                </div>
+
+                <div class="order-items">
+                    <div class="order-item">
+                        <div class="item-img" style="background-image: url('https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=150&q=80');"></div>
+                        <div class="item-details">
+                            <h4>SOFA HOÀNG GIA LOUIS XV</h4>
+                            <p>Chất liệu: Gỗ gõ đỏ</p>
+                            <p>Bọc: Da thật cao cấp</p>
+                            <p>Màu sắc: Nâu đậm</p>
+                            <div class="item-price-row">
+                                <span>Số lượng: 1</span>
+                                <strong>79.800.000 đ</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-item">
+                        <div class="item-img" style="background-image: url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=150&q=80');"></div>
+                        <div class="item-details">
+                            <h4>BÀN TRÀ IMPERIAL</h4>
+                            <p>Chất liệu: Gỗ gõ đỏ</p>
+                            <p>Mặt bàn: Đá cẩm thạch</p>
+                            <p>Kích thước: 120x70x45cm</p>
+                            <div class="item-price-row">
+                                <span>Số lượng: 1</span>
+                                <strong>24.800.000 đ</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-item">
+                        <div class="item-img" style="background-image: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=150&q=80');"></div>
+                        <div class="item-details">
+                            <h4>ĐÈN BÀN IMPERIAL</h4>
+                            <p>Chất liệu: Đồng mạ vàng</p>
+                            <p>Chao đèn: Vải cao cấp</p>
+                            <p>Kích thước: 45cm</p>
+                            <div class="item-price-row">
+                                <span>Số lượng: 1</span>
+                                <strong>8.900.000 đ</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="discount-code">
+                    <label>MÃ GIẢM GIÁ</label>
+                    <div class="discount-input">
+                        <input type="text" placeholder="Nhập mã giảm giá">
+                        <button>ÁP DỤNG</button>
+                    </div>
+                </div>
+
+                <div class="cost-summary">
+                    <div class="cost-row">
+                        <span>Tạm tính</span>
+                        <strong>113.500.000 đ</strong>
+                    </div>
+                    <div class="cost-row">
+                        <span>Phí vận chuyển</span>
+                        <strong>Miễn phí</strong>
+                    </div>
+                    <div class="cost-row">
+                        <span>Giảm giá</span>
+                        <strong style="color: #d9534f;">- 5.000.000 đ</strong>
+                    </div>
+                </div>
+
+                <div class="total-row">
+                    <span>TỔNG CỘNG</span>
+                    <strong>108.500.000 đ</strong>
+                </div>
+
+                <button class="btn-checkout">HOÀN TẤT ĐẶT HÀNG <i class="fas fa-arrow-right"></i></button>
+
+                <div class="security-note">
+                    <i class="fas fa-shield-check"></i>
+                    <p>Thông tin của bạn được bảo mật tuyệt đối và chỉ sử dụng để xử lý đơn hàng.</p>
+                </div>
+            </div>
+        </aside>
+    </section>
+
+    <section class="support-banner">
+        <div class="support-content">
+            <div class="support-icon"><i class="fas fa-phone-volume"></i></div>
+            <div class="support-text">
+                <h3>CẦN HỖ TRỢ ĐƠN HÀNG?</h3>
+                <p>Đội ngũ tư vấn viên của Lavish Heritage luôn sẵn sàng hỗ trợ bạn.</p>
+            </div>
+            <button class="btn-support">LIÊN HỆ TƯ VẤN <i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2 style="font-family: var(--font-heading); font-size: 20px; color: var(--dark); margin-bottom: 5px;">LAVISH HERITAGE</h2>
+                <span style="font-size: 9px; letter-spacing: 1px; color: var(--text-light); text-transform: uppercase; display: block; margin-bottom: 15px;">Timeless Elegance</span>
+                <p>Nơi tinh hoa cổ điển sống lại trong từng thiết kế nội thất đẳng cấp, mang đến không gian sống xứng tầm và di sản vượt thời gian.</p>
+                <div class="social-icons" style="margin-top: 20px;">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h4>LIÊN HỆ</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 45 Nguyễn Huệ, Q.1, TP. Hồ Chí Minh</p>
+                <p><i class="fas fa-phone-alt"></i> (+84) 28 3822 8888</p>
+                <p><i class="fas fa-envelope"></i> info@lavishheritage.vn</p>
+                <p><i class="fas fa-globe"></i> lavishheritage.vn</p>
+            </div>
+            <div class="footer-links">
+                <h4>DANH MỤC</h4>
+                <ul>
+                    <li><a href="#">Bộ sưu tập</a></li>
+                    <li><a href="#">Sản phẩm</a></li>
+                    <li><a href="#">So sánh</a></li>
+                    <li><a href="#">Kết hợp sản phẩm</a></li>
+                    <li><a href="#">Cá nhân hóa không gian</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>CHÍNH SÁCH</h4>
+                <ul>
+                    <li><a href="#">Chính sách bảo hành</a></li>
+                    <li><a href="#">Chính sách đổi trả</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Điều khoản sử dụng</a></li>
+                    <li><a href="#">Chính sách vận chuyển</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Lavish Heritage. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

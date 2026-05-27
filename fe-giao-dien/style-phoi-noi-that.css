@@ -1,0 +1,599 @@
+/* RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #FDFBF7;
+    --bg-panel: #F8F5F0;
+    --gold: #C49A45;
+    --gold-dark: #a87f32;
+    --dark: #2F241D;
+    --text-main: #4a4a4a;
+    --text-light: #777;
+    --border-color: #e5dccf;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo h2 {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    color: var(--dark);
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.logo span {
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-light);
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--dark);
+    transition: color 0.3s;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: var(--gold);
+}
+
+nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 2px;
+    background-color: var(--gold);
+}
+
+.header-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 18px;
+    color: var(--dark);
+}
+.header-icons i { cursor: pointer; transition: 0.3s; }
+.header-icons i:hover { color: var(--gold); }
+
+/* PAGE BANNER */
+.page-banner {
+    height: 200px;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=80') center/cover;
+    margin-bottom: 40px;
+}
+
+/* SECTION TITLES */
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+.section-title h2 {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    color: var(--dark);
+}
+.section-title .line {
+    width: 40px;
+    height: 1px;
+    background-color: var(--gold);
+    opacity: 0.5;
+}
+.step-title {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    color: var(--dark);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* STEP 1: CHỌN KHÔNG GIAN */
+.step-section {
+    padding: 0 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.space-selection-grid {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Upload Box */
+.upload-container {
+    flex: 1;
+    background-color: var(--bg-panel);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.upload-area {
+    border: 2px dashed var(--gold);
+    border-radius: 8px;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.upload-area:hover { background-color: #faf7f2; }
+.upload-area i {
+    font-size: 40px;
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+.upload-area p {
+    font-size: 13px;
+    color: var(--text-main);
+    line-height: 1.6;
+}
+.format-note {
+    text-align: center;
+    font-size: 11px;
+    color: var(--text-light);
+}
+
+.btn-primary {
+    background-color: var(--gold-dark);
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-body);
+    transition: 0.3s;
+}
+.btn-primary:hover { background-color: var(--dark); }
+
+/* OR Divider */
+.or-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 60px;
+}
+.or-divider span {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-style: italic;
+    color: var(--text-light);
+    z-index: 10;
+}
+.or-divider::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: var(--border-color);
+    left: 50%;
+    z-index: 1;
+}
+
+/* Templates */
+.templates-container {
+    flex: 2;
+    background-color: var(--bg-panel);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 30px;
+}
+.templates-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+.template-card {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    text-align: center;
+    padding-bottom: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.template-card:hover { border-color: var(--gold); box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+.template-card .img-box {
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10px;
+}
+.template-card h4 {
+    font-family: var(--font-heading);
+    font-size: 11px;
+    color: var(--dark);
+    margin-bottom: 2px;
+}
+.template-card p {
+    font-size: 9px;
+    color: var(--text-light);
+}
+
+/* STEP 2: TRẢI NGHIỆM PHỐI NỘI THẤT */
+.experience-section {
+    padding: 0 60px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Tags */
+.product-tags {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    border-radius: 8px;
+    background: #fff;
+}
+.tag {
+    padding: 8px 20px;
+    background: transparent;
+    border: none;
+    font-size: 12px;
+    font-family: var(--font-body);
+    color: var(--text-main);
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 4px;
+}
+.tag.active {
+    background-color: var(--dark);
+    color: #fff;
+}
+.tag:hover:not(.active) { color: var(--gold); }
+
+/* Workspace Layout */
+.workspace-layout {
+    display: flex;
+    gap: 20px;
+}
+
+/* Sidebar */
+.items-sidebar {
+    width: 280px;
+    flex-shrink: 0;
+    height: 600px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+/* Scrollbar custom cho sidebar */
+.items-sidebar::-webkit-scrollbar { width: 4px; }
+.items-sidebar::-webkit-scrollbar-track { background: #f1f1f1; }
+.items-sidebar::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
+
+.item-group {
+    margin-bottom: 20px;
+}
+.group-title {
+    font-size: 11px;
+    color: var(--dark);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.item-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+.item-card:hover { border-color: var(--gold); }
+.item-card .img-thumbnail {
+    width: 60px;
+    height: 45px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 2px;
+    margin-right: 10px;
+}
+.item-info { flex: 1; }
+.item-info h5 {
+    font-family: var(--font-heading);
+    font-size: 11px;
+    color: var(--dark);
+    margin-bottom: 2px;
+}
+.item-info p {
+    font-size: 9px;
+    color: var(--text-light);
+}
+.add-btn {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.add-btn:hover { background: var(--gold); color: #fff; }
+
+/* Canvas Area */
+.canvas-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.room-preview {
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    position: relative;
+    border: 1px solid var(--border-color);
+}
+.instruction-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.instruction-badge i { color: var(--gold); }
+
+.hotspot {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.9);
+    border: 2px solid var(--gold);
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+}
+.hotspot:hover { transform: translate(-50%, -50%) scale(1.2); }
+
+.canvas-tools {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    background: rgba(0,0,0,0.6);
+    padding: 10px;
+    border-radius: 8px;
+}
+.canvas-tools button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.canvas-tools button:hover { color: var(--gold); }
+
+.btn-dark {
+    background: #3c2415;
+    border: 1px solid #3c2415;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-dark:hover { background: var(--dark); }
+
+/* STEP 3: MẪU KHÔNG GIAN CÓ SẴN (Suggestions) */
+.suggestions-section {
+    padding: 0 60px 60px;
+}
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.carousel-wrapper .nav-arrow {
+    position: absolute;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid var(--border-color);
+    color: var(--dark);
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.carousel-wrapper .nav-arrow:hover { color: var(--gold); }
+.carousel-wrapper .nav-arrow.left { left: -20px; }
+.carousel-wrapper .nav-arrow.right { right: -20px; }
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+}
+.product-card {
+    background-color: var(--bg-panel);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    text-align: center;
+    padding-bottom: 15px;
+    overflow: hidden;
+}
+.product-img {
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 15px;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--bg-color);
+    border-top: 1px solid var(--border-color);
+    padding: 60px 80px 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2.5fr 2fr 1.5fr 1.5fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-brand p {
+    font-size: 12px;
+    color: var(--text-light);
+    line-height: 1.8;
+    max-width: 300px;
+}
+
+.footer-contact h4, .footer-links h4 {
+    font-size: 13px;
+    color: var(--dark);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.footer-contact p {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-bottom: 12px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 12px;
+}
+
+.footer-links ul li a {
+    font-size: 12px;
+    color: var(--text-light);
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: var(--gold);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #eee;
+    color: var(--dark);
+    font-size: 14px;
+    transition: 0.3s;
+}
+.social-icons a:hover {
+    background-color: var(--gold);
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+    font-size: 12px;
+    color: var(--text-light);
+}
